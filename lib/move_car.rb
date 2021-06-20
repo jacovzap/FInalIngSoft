@@ -6,3 +6,8 @@ def devolverArrayPosicion(numero)
 
     return array
 end
+
+
+def devolverOrientacion(orientacion)
+    return orientacion
+end
