@@ -26,7 +26,31 @@ def returnArrayAndOrientation(posicionInicial, orientacionInicial, cadenaComando
 
             end
         end
+
+        if orientacionInicial == "E"
+            if comando == "D"
+                orientacionFinal = "S"
+            elsif comando == "I"
+                orientacionFinal = "N"
+            end
+        end
     
+        if orientacionInicial == "O"
+            if comando == "D"
+                orientacionFinal = "N"
+            elsif comando == "I"
+                orientacionFinal = "S"
+            end
+        end
+    
+        if orientacionInicial == "S"
+            if comando == "D"
+                orientacionFinal = "O"
+            elsif comando == "I"
+                orientacionFinal = "E"
+            end
+        end
     end
+
     return arrayPosicion, orientacionFinal
 end

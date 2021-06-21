@@ -31,6 +31,29 @@ RSpec.describe "realizar el movimiento del carro" do
         expect(resultado).to eq([[3,3], "E"])
     end
 
+    it "deberia girar a 'S' al introducir el texto 'E' con la instruccion III" do
+        posicionInicial = "3,3"
+        orientacionInicial = "E"
+        comandos = "IDID"
+        resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandos)
+        expect(resultado).to eq([[3,3], "S"])
+    end
+
+    it "deberia girar a 'N' al introducir el texto 'O' con la instruccion III" do
+        posicionInicial = "3,3"
+        orientacionInicial = "O"
+        comandos = "IDID"
+        resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandos)
+        expect(resultado).to eq([[3,3], "N"])
+    end
+
+    it "deberia girar a 'O' al introducir el texto 'S' con la instruccion III" do
+        posicionInicial = "3,3"
+        orientacionInicial = "S"
+        comandos = "IDID"
+        resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandos)
+        expect(resultado).to eq([[3,3], "O"])
+    end
 
   
 end
