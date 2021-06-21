@@ -1,5 +1,4 @@
 
-
 def devolverArrayPosicion(numero)
     numeros = numero.split(',')
     array = [numeros[0].to_i, numeros[1].to_i]
@@ -8,6 +7,9 @@ def devolverArrayPosicion(numero)
 end
 
 
-def devolverOrientacion(orientacion)
-    return orientacion
+def devolverCadenaComandos(comandos)
+    arrayComandos = comandos.split('')
+    return arrayComandos
 end
+
+
