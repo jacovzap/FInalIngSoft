@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" type="text/css" href="css/juego.css"/> 
+</head>
+</html>
+
+<body>
+   
+  <div class="principal">
+
+     <div class="comandos">
+
+        <%if $cars.to_i == 1%>
+        <form method='post' action ='/resultado'>
+      
+        <p>Introduzca los movimientos que desea realizar (ADAIA)</p>
+            <input type='text' name='comandos'>
+
+            <br><br>
+            <br>
+            <input type='submit' value='Mover!' class="boton">
+        </form>
+        <%else%>
+            <form method='post' action ='/resultado'>
+      
+            <p>Introduzca los movimientos que desea realizar al auto 1</p>
+            <input type='text' name='comandos'>
+
+            <p>Introduzca los movimientos que desea realizar al auto 2</p>
+            <input type='text' name='comandos2'>
+            <br><br>
+            <br>
+            <input type='submit' value='Mover!' class="boton">
+        </form>
+        <%end%>
+    </div>
+
+
+    </div>
+
+   
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" type="text/css" href="css/juego.css"/> 
+</head>
+</html>
+
+<body>
+    <div class="principal">
+
+     <div class="comandos">
+
+        <%if $cars.to_i == 1%>
+        <form method='post' action ='/ventanaComandos'>
+        <p>Introduzca la posicion inicial (1,2)(3,3)</p>
+            <input type='text' name='posicionInicial'>
+      
+        <br>
+        <p>Introduzca la orientacion (N, E, O, S)</p>
+            <input type='text' name='orientacion'>
+        <br>
+        <p>Introduzca los obstaculos (3,3)(3,3 2,2 1,1)</p>
+            <input type='text' name='obstaculos'>
+
+            <br><br>
+            <br>
+            <input type='submit' value='Ingresar' class="boton">
+        </form>
+        <%else%>
+       <form method='post' action ='/ventanaComandos'>
+        <p>Introduzca la posicion inicial del auto 1</p>
+            <input type='text' name='posicionInicial'>
+      
+        <p>Introduzca la orientacion del auto 1</p>
+            <input type='text' name='orientacion'>
+
+        <p>Introduzca la posicion inicial del auto 2</p>
+            <input type='text' name='posicionInicial2'>
+      
+        <p>Introduzca la orientacion del auto 2</p>
+            <input type='text' name='orientacion2'>
+
+        <p>Introduzca los obstaculos (3,3)(3,3 2,2 1,1)</p>
+            <input type='text' name='obstaculos'>
+            
+            <br><br>
+            <br>
+            <input type='submit' value='Ingresar' class="boton">
+        </form>
+
+        <%end%>
+    </div>
+
+
+    </div>
+
+   
+</body>

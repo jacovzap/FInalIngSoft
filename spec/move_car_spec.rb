@@ -77,7 +77,16 @@ RSpec.describe "realizar el movimiento del carro" do
         orientacionInicial = "E"
         comandoAvance = "AADAADADDA"
         resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandoAvance)
-        expect(resultado).to eq([[1, 1], "E"])
+        expect(resultado).to eq([[1,1], "E"])
+    end
+
+    it "deberia devolver [[3,3],N] al introducir como texto el comando ADAAADAAADAAADAA, la posicion inicial 3,3 y la orientacion inicial N" do
+        posicionInicial = "3,3"
+        orientacionInicial = "N"
+        comandoAvance = "ADAAADAAADAAADAA"
+        setSize("3")
+        resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandoAvance)
+        expect(resultado).to eq([[3,3], "N"])
     end
 
 

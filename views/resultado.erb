@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" type="text/css" href="css/juego.css"/> 
+</head>
+</html>
+
+<body>
+    <div class="principal">
+
+         <div class="comandos">
+         <%if $cars.to_i == 1%>
+            <p>La posicion final es: </p> <%=@resultado%>
+
+        <%else%>
+            <p>La posicion final del vehiculo 1 es: </p> <%=@resultado%>
+
+            <p>La posicion final del vehiculo 2 es: </p> <%=@resultado2%>
+        <%end%>
+
+<br><br><br>
+
+            <form method='post' action ='/menu'>
+            <input type='submit' value='VOLVER A JUGAR' class="boton">
+    </div>
+   
+
+
+    
+    </div>
+
+   
+</body>

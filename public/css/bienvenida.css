@@ -1,0 +1,22 @@
+        
+        .titulo{
+            font-size: 50px;
+            text-align: center;
+            font-weight: 200px;
+        }
+
+        .boton{
+           font-size: 20px;
+            background: #5564eb;
+            color: #fafbfd
+        }
+
+        .boton:hover{
+            background: #ffa420;
+            color: #fafbfd
+        }
+
+        .botonTamanio{
+            text-align:center;
+            
+        }
