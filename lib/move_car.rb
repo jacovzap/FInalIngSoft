@@ -13,44 +13,52 @@ def devolverCadenaComandos(comandos)
 end
 
 
-def returnArrayAndOrientation(posicionInicial, orientacionInicial, cadenaComandos)
-    arrayPosicion = devolverArrayPosicion(posicionInicial)
-    arrayComandos = devolverCadenaComandos(cadenaComandos)
+def ejecutarComando(posicionInicial, orientacionInicial, comando)
     orientacionFinal = orientacionInicial
-    arrayComandos.each do |comando| 
-        if orientacionInicial == "N"
-            if comando == "D"
-                orientacionFinal = "E"
-            elsif comando == "I"
-                orientacionFinal = "O"
 
-            end
-        end
-
-        if orientacionInicial == "E"
-            if comando == "D"
-                orientacionFinal = "S"
-            elsif comando == "I"
-                orientacionFinal = "N"
-            end
-        end
-    
-        if orientacionInicial == "O"
-            if comando == "D"
-                orientacionFinal = "N"
-            elsif comando == "I"
-                orientacionFinal = "S"
-            end
-        end
-    
-        if orientacionInicial == "S"
-            if comando == "D"
-                orientacionFinal = "O"
-            elsif comando == "I"
-                orientacionFinal = "E"
-            end
+    if orientacionInicial == "N"
+        if comando == "D"
+            orientacionFinal = "E"
+        elsif comando == "I"
+            orientacionFinal = "O"
         end
     end
 
-    return arrayPosicion, orientacionFinal
+    if orientacionInicial == "E"
+        if comando == "D"
+            orientacionFinal = "S"
+        elsif comando == "I"
+            orientacionFinal = "N"
+        end
+    end
+
+    if orientacionInicial == "O"
+        if comando == "D"
+            orientacionFinal = "N"
+        elsif comando == "I"
+            orientacionFinal = "S"
+        end
+    end
+
+    if orientacionInicial == "S"
+        if comando == "D"
+            orientacionFinal = "O"
+        elsif comando == "I"
+            orientacionFinal = "E"
+        end
+    end
+
+    return orientacionFinal
+end
+
+
+
+def returnArrayAndOrientation(posicionInicial, orientacion, cadenaComandos)
+    arrayPosicion = devolverArrayPosicion(posicionInicial)
+    arrayComandos = devolverCadenaComandos(cadenaComandos)
+    arrayComandos.each do |comando| 
+        orientacion = ejecutarComando(arrayPosicion, orientacion, comando)
+    end
+
+    return arrayPosicion, orientacion
 end

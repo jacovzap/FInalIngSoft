@@ -23,26 +23,26 @@ RSpec.describe "realizar el movimiento del carro" do
     end
 
 
-    it "deberia girar a 'E' al introducir el texto 'N' con la instruccion III" do
+    it "deberia girar a 'O' al introducir el texto 'N' con la instruccion I" do
         posicionInicial = "3,3"
         orientacionInicial = "N"
-        comandos = "IDID"
+        comandos = "I"
         resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandos)
-        expect(resultado).to eq([[3,3], "E"])
+        expect(resultado).to eq([[3,3], "O"])
     end
 
-    it "deberia girar a 'S' al introducir el texto 'E' con la instruccion III" do
+    it "deberia girar a 'O' al introducir el texto 'E' con la instruccion II" do
         posicionInicial = "3,3"
         orientacionInicial = "E"
-        comandos = "IDID"
+        comandos = "II"
         resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandos)
-        expect(resultado).to eq([[3,3], "S"])
+        expect(resultado).to eq([[3,3], "O"])
     end
 
     it "deberia girar a 'N' al introducir el texto 'O' con la instruccion III" do
         posicionInicial = "3,3"
         orientacionInicial = "O"
-        comandos = "IDID"
+        comandos = "III"
         resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandos)
         expect(resultado).to eq([[3,3], "N"])
     end
@@ -50,7 +50,7 @@ RSpec.describe "realizar el movimiento del carro" do
     it "deberia girar a 'O' al introducir el texto 'S' con la instruccion III" do
         posicionInicial = "3,3"
         orientacionInicial = "S"
-        comandos = "IDID"
+        comandos = "III"
         resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandos)
         expect(resultado).to eq([[3,3], "O"])
     end
