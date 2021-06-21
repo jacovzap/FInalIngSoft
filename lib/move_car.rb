@@ -13,7 +13,7 @@ def devolverCadenaComandos(comandos)
 end
 
 
-def ejecutarComando(posicionInicial, orientacionInicial, comando)
+def ejecutarComando(arrayPosicion, orientacionInicial, comando)
     orientacionFinal = orientacionInicial
 
     if orientacionInicial == "N"
@@ -21,6 +21,8 @@ def ejecutarComando(posicionInicial, orientacionInicial, comando)
             orientacionFinal = "E"
         elsif comando == "I"
             orientacionFinal = "O"
+        elsif comando == "A"
+            arrayPosicion[1] = arrayPosicion[1] + 1
         end
     end
 
@@ -29,6 +31,8 @@ def ejecutarComando(posicionInicial, orientacionInicial, comando)
             orientacionFinal = "S"
         elsif comando == "I"
             orientacionFinal = "N"
+        elsif comando == "A"
+            arrayPosicion[0] = arrayPosicion[0] - 1
         end
     end
 
@@ -37,6 +41,8 @@ def ejecutarComando(posicionInicial, orientacionInicial, comando)
             orientacionFinal = "N"
         elsif comando == "I"
             orientacionFinal = "S"
+        elsif comando == "A"
+            arrayPosicion[0] = arrayPosicion[0] + 1
         end
     end
 
@@ -45,10 +51,11 @@ def ejecutarComando(posicionInicial, orientacionInicial, comando)
             orientacionFinal = "O"
         elsif comando == "I"
             orientacionFinal = "E"
+        elsif comando == "A"
+            arrayPosicion[1] = arrayPosicion[1] - 1
         end
     end
-
-    return orientacionFinal
+    return arrayPosicion, orientacionFinal
 end
 
 
@@ -57,7 +64,7 @@ def returnArrayAndOrientation(posicionInicial, orientacion, cadenaComandos)
     arrayPosicion = devolverArrayPosicion(posicionInicial)
     arrayComandos = devolverCadenaComandos(cadenaComandos)
     arrayComandos.each do |comando| 
-        orientacion = ejecutarComando(arrayPosicion, orientacion, comando)
+        arrayPosicion, orientacion = ejecutarComando(arrayPosicion, orientacion, comando)
     end
 
     return arrayPosicion, orientacion
