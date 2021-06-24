@@ -19,18 +19,21 @@ end
 
 
 post '/ventanaComandos' do
+    obstaculos = params[:obstaculos]
+    puentes = params[:puentes]
+    setObstaculos(obstaculos)
+    setPuentes(puentes)
     if $cars.to_i == 1
         $inicial = params[:posicionInicial]
-        @posicionInicial = devolverArrayPosicion($inicial)
         $orientacionInicial = params[:orientacion]
+
         erb :ventanaComandos
     else
         $inicial = params[:posicionInicial]
         $inicial2 = params[:posicionInicial2]
-        @posicionInicial = devolverArrayPosicion($inicial)
-        @posicionInicial2 = devolverArrayPosicion($inicial2)
         $orientacionInicial = params[:orientacion]
         $orientacionInicial2 = params[:orientacion2]
+   
         erb :ventanaComandos
     end
 end
