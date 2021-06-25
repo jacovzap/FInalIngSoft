@@ -22,7 +22,7 @@ post '/ventanaComandos' do
     obstaculos = params[:obstaculos]
     puentes = params[:puentes]
     setObstaculos(obstaculos)
-    setPuentes(puentes)
+    #setPuentes(puentes)
     if $cars.to_i == 1
         $inicial = params[:posicionInicial]
         $orientacionInicial = params[:orientacion]
@@ -47,8 +47,7 @@ post '/resultado' do
     else
         comandos = params[:comandos]
         comandos2 = params[:comandos2]
-        @resultado = returnArrayAndOrientation($inicial, $orientacionInicial, comandos)
-        @resultado2 = returnArrayAndOrientation($inicial2, $orientacionInicial2, comandos2)
+        @resultado = returnArrayAndOrientationForTwoCars($inicial, $orientacionInicial, comandos, $inicial2, $orientacionInicial2, comandos2)
         erb :resultado
     end
 

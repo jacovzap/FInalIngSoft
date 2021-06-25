@@ -94,15 +94,29 @@ RSpec.describe "realizar el movimiento del carro" do
     end
 
     #probar que se pueden colocar obstaculos en el mapa
-    it "deberia devolver [[1,1],E] al introducir como texto el comando ADAIAADAIA, la posicion inicial 3,3 y la orientacion inicial E" do
-        posicionInicial = "3,3"
+    it "deberia devolver [[4,5],E] al introducir como texto el comando ADAI, la posicion inicial 5,5 y la orientacion inicial E" do
+        posicionInicial = "5,5"
         orientacionInicial = "E"
-        comandoAvance = "ADAIAADAIA"
-        setSize("3")
+        comandoAvance = "ADAI"
+        setSize("5")
+        setObstaculos("4,4")
         resultado = returnArrayAndOrientation(posicionInicial, orientacionInicial, comandoAvance)
-        expect(resultado).to eq([[1,1], "E"])
+        expect(resultado).to eq([[4,5], "E"])
     end
 
+
+    #probar que se pueden utilizar dos vehiculos
+    it "deberia devolver [[1, 3], E, [3, 1], O] , al introducir como texto el comando DAA, la posicion inicial 3,3 y la orientacion inicial N para el auto 1 y la posicion 1,1 orientacion O con el comando AA para el auto 2" do
+        posicionInicial = "3,3"
+        orientacionInicial = "N"
+        comandoAvance = "DAA"
+        posicionInicial2 = "1,1"
+        orientacionInicial2 = "O"
+        comandoAvance2 = "AA"
+        setSize("3")
+        resultado = returnArrayAndOrientationForTwoCars(posicionInicial, orientacionInicial, comandoAvance, posicionInicial2, orientacionInicial2, comandoAvance2)
+        expect(resultado).to eq([[1, 3], "E", [3, 1], "O"])
+    end
 end
 
 

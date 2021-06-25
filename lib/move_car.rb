@@ -167,10 +167,49 @@ def returnArrayAndOrientation(posicionInicial, orientacion, cadenaComandos)
     arrayComandos.each do |comando| 
         arrayPosicion, orientacion = ejecutarComando(arrayPosicion, orientacion, comando)
     end
-
-
-    
     return arrayPosicion, orientacion
+end
+
+
+def returnArrayAndOrientationForTwoCars(posicionInicial, orientacion, cadenaComandos, posicionInicial2, orientacion2, cadenaComandos2)
+    arrayPosicion = devolverArrayPosicion(posicionInicial)
+    arrayComandos = devolverCadenaComandos(cadenaComandos)
+    arrayPosicion2 = devolverArrayPosicion(posicionInicial2)
+    arrayComandos2 = devolverCadenaComandos(cadenaComandos2)
+    
+    longitudInstrucciones = arrayComandos.length + arrayComandos2.length
+    aux = 0 
+    arrayInstrucciones = []
+
+    while aux < longitudInstrucciones do
+        if aux % 2 == 0
+            arrayInstrucciones.append(arrayComandos.first)
+            arrayComandos.delete_at(0)
+        else
+            arrayInstrucciones.append(arrayComandos2.first)
+            arrayComandos2.delete_at(0)
+        end
+        aux = aux + 1
+     end
+
+    aux = 0
+    longitudObstaculos = $listaObstaculos.length
+    arrayInstrucciones.each do |comando| 
+        if aux % 2 == 0
+            arrayPosicion, orientacion = ejecutarComando(arrayPosicion, orientacion, comando)
+            if aux != 0 
+                $listaObstaculos.delete_at(longitudObstaculos)
+            end
+            $listaObstaculos.append([arrayPosicion[0], arrayPosicion[1]])
+        else
+            arrayPosicion2, orientacion2 = ejecutarComando(arrayPosicion2, orientacion2, comando)
+            $listaObstaculos.delete_at(longitudObstaculos)  
+            $listaObstaculos.append([arrayPosicion2[0], arrayPosicion2[1]])
+        end
+        aux = aux + 1
+    end
+    return arrayPosicion, orientacion, arrayPosicion2, orientacion2
+
 end
 
  
