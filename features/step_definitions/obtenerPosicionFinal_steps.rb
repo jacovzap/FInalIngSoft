@@ -1,11 +1,10 @@
 
-
-Given('estoy en la pagina resultados') do
+When('visito la pagina resultados') do
     visit '/resultado'
   end
   
 
-  Then('deberia poder ver la posicion final del automovil') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
+Then("deberia ver el mensaje con la posicion y el mensaje {string}") do |message|
+    pending
+    #expect(page.body).to match /#{message}/m
+end

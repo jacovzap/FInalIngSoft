@@ -5,5 +5,5 @@ Para: Ver el resultado final de mis comandos
 
 Scenario:
     
-    Given estoy en la pagina de resultados
-    Then deberia ver la orientacion final del automovil
+    When visito la pagina de resultados
+    Then deberia ver el mensaje con la orientacion y el mensaje "La posicion final es:"

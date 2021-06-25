@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-06-25T11:08:58-04:00">2021-06-25T11:08:58-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-06-25T11:36:12-04:00">2021-06-25T11:36:12-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -139,7 +139,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f5bc676b98a5f3c7386c3e6586ee88a41d52d6ea" class="src_link" title="features/step_definitions/obtenerOrientacionFinal_steps.rb">features/step_definitions/obtenerOrientacionFinal_steps.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
@@ -150,7 +150,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#22225f5efa4d1c08499949539f47faf982a1daee" class="src_link" title="features/step_definitions/obtenerPosicionFinal_steps.rb">features/step_definitions/obtenerPosicionFinal_steps.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">11</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
@@ -1637,7 +1637,7 @@
 
             
 
-            <code class="ruby">Given(&#39;estoy en la pagina de resultados&#39;) do</code>
+            <code class="ruby">When(&#39;visito la pagina de resultados&#39;) do</code>
           </li>
         </div>
       
@@ -1675,13 +1675,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">  Then(&#39;deberia ver la orientacion final del automovil&#39;) do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1692,18 +1692,18 @@
 
             
 
-            <code class="ruby">    pending # Write code here that turns the phrase above into concrete actions</code>
+            <code class="ruby">Then(&quot;deberia ver el mensaje con la orientacion y el mensaje {string}&quot;) do |message| </code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page.body).to match /#{message}/m</code>
           </li>
         </div>
       
@@ -1714,7 +1714,18 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1761,13 +1772,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">When(&#39;visito la pagina resultados&#39;) do</code>
           </li>
         </div>
       
@@ -1778,18 +1789,18 @@
 
             
 
-            <code class="ruby">Given(&#39;estoy en la pagina resultados&#39;) do</code>
+            <code class="ruby">    visit &#39;/resultado&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
 
-            <code class="ruby">    visit &#39;/resultado&#39;</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1800,7 +1811,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
@@ -1811,18 +1822,18 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">Then(&quot;deberia ver el mensaje con la posicion y el mensaje {string}&quot;) do |message|</code>
           </li>
         </div>
       
@@ -1833,18 +1844,18 @@
 
             
 
-            <code class="ruby">  Then(&#39;deberia poder ver la posicion final del automovil&#39;) do</code>
+            <code class="ruby">    pending</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="9">
+            
             
 
             
 
-            <code class="ruby">    pending # Write code here that turns the phrase above into concrete actions</code>
+            <code class="ruby">    #expect(page.body).to match /#{message}/m</code>
           </li>
         </div>
       
@@ -1855,18 +1866,7 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
+            <code class="ruby">end</code>
           </li>
         </div>
       

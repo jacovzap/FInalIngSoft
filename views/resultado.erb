@@ -2,20 +2,20 @@
 <html>
 <head>
       <link rel="stylesheet" type="text/css" href="css/juego.css"/> 
+      <link rel="stylesheet" type="text/css" href="css/bienvenida.css"/> 
 </head>
 </html>
 
 <body>
+
+    <h1 class="titulo">La posicion final es:</h1>
     <div class="principal">
 
+         
+
          <div class="comandos">
-         <%if $cars.to_i == 1%>
-            <p>La posicion final es: </p> <%=@resultado%>
+            <p></p> <%=@resultado%>
 
-        <%else%>
-            <p>La posicion final de ambos vehiculos es: </p> <%=@resultado%>
-
-         <!--   <p>La posicion final del vehiculo 2 es: </p> <%=@resultado2%> -->
         <%end%>
 
 <br><br><br>
