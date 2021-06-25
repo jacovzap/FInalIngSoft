@@ -1,4 +1,3 @@
-  
 When("visito la pagina de bienvenida") do
     visit '/'
 end
