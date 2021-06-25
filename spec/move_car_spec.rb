@@ -117,6 +117,20 @@ RSpec.describe "realizar el movimiento del carro" do
         resultado = returnArrayAndOrientationForTwoCars(posicionInicial, orientacionInicial, comandoAvance, posicionInicial2, orientacionInicial2, comandoAvance2)
         expect(resultado).to eq([[1, 3], "E", [3, 1], "O"])
     end
+
+
+    #probar que los vehiculos se limitan entre si 
+    it "deberia devolver [[2, 3], N, [2, 2], E]  , al introducir como texto el comando DAA, la posicion inicial 2,1 y la orientacion inicial N para el auto 1 y la posicion 3,2 orientacion E con el comando AA para el auto 2" do
+        posicionInicial = "2,1"
+        orientacionInicial = "N"
+        comandoAvance = "AA"
+        posicionInicial2 = "3,2"
+        orientacionInicial2 = "E"
+        comandoAvance2 = "AA"
+        setSize("3")
+        resultado = returnArrayAndOrientationForTwoCars(posicionInicial, orientacionInicial, comandoAvance, posicionInicial2, orientacionInicial2, comandoAvance2)
+        expect(resultado).to eq([[2, 3], "N", [2, 2], "E"])
+    end
 end
 
 
