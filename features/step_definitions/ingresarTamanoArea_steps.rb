@@ -1,4 +1,4 @@
-Given("estoy en la pagina de menu") do
+Given("estoy en la pagina menu") do
     visit '/menu'
   end
   
@@ -9,4 +9,9 @@ Given("estoy en la pagina de menu") do
   When('presiono el boton de tamanio {string}') do |string|
     click_button(string)
   end
+  
+  Then('deberia ir a la ventana de datos iniciales') do
+    visit '/datosIniciales'
+  end
+  
   

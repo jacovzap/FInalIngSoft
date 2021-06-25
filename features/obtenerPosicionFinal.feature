@@ -5,5 +5,5 @@ Para: Ver el resultado final de mis comandos
 
 Scenario:
     
-    Given estoy en la pagina de resultados 
+    Given estoy en la pagina resultados 
     Then deberia poder ver la posicion final del automovil

@@ -292,11 +292,11 @@
       "/home/jacovzap/semestre8cho/IngSoftware/examenFinal/features/step_definitions/botonIngresar_steps.rb": {
         "lines": [
           1,
-          2,
+          1,
           null,
           null,
           1,
-          0,
+          1,
           null,
           null,
           1,
@@ -322,30 +322,11 @@
       "/home/jacovzap/semestre8cho/IngSoftware/examenFinal/features/step_definitions/botonJugar_steps.rb": {
         "lines": [
           1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null
-        ]
-      },
-      "/home/jacovzap/semestre8cho/IngSoftware/examenFinal/features/step_definitions/ingresarPosicionInicial_steps.rb": {
-        "lines": [
-          1,
-          0,
-          null,
-          null,
-          1,
           1,
           null,
           null,
           1,
-          0,
+          1,
           null,
           null,
           1,
@@ -356,7 +337,11 @@
       "/home/jacovzap/semestre8cho/IngSoftware/examenFinal/features/step_definitions/ingresarTamanoArea_steps.rb": {
         "lines": [
           1,
-          0,
+          1,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           1,
@@ -365,21 +350,40 @@
           null,
           1,
           0,
+          null,
           null,
           null
         ]
       },
       "/home/jacovzap/semestre8cho/IngSoftware/examenFinal/features/step_definitions/obtenerOrientacionFinal_steps.rb": {
         "lines": [
-
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
         ]
       },
       "/home/jacovzap/semestre8cho/IngSoftware/examenFinal/features/step_definitions/obtenerPosicionFinal_steps.rb": {
         "lines": [
-
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
         ]
       }
     },
-    "timestamp": 1624633123
+    "timestamp": 1624633738
   }
 }

@@ -5,7 +5,8 @@ Para: Delimitar el área en el que voy a jugar
 
 Scenario:
     
-    Given estoy en la pagina de menu
+    Given estoy en la pagina menu
     When selecciono el tamanio "3" del campo "size"
-    Then deberia poder elegir con que tamano de mapa deseo jugar
+    When presiono el boton de tamanio "A JUGAR!"
+    Then deberia ir a la ventana de datos iniciales
 
