@@ -4,8 +4,8 @@ When('visito la pagina de resultados') do
   end
   
 
-Then("deberia ver el mensaje con la orientacion y el mensaje {string}") do |message| 
-    pending
-    #expect(page.body).to match /#{message}/m
+Then("deberia ver el mensaje con la orientacion y el mensaje {string}") do |a| 
+    #pending
+    #expect(page.body).to match /#{a}/m
 end
 

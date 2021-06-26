@@ -6,11 +6,11 @@ get '/' do
     erb :bienvenida
 end
 
-post '/menu' do
+get '/menu' do
     erb :menu
 end
 
-post '/datosIniciales' do
+get '/datosIniciales' do
     $size = params[:size]
     $cars = params[:cars]
     setSize($size)
@@ -39,7 +39,7 @@ post '/ventanaComandos' do
 end
 
 
-post '/resultado' do
+get '/resultado' do
     if $cars.to_i == 1
         comandos = params[:comandos]
         @resultado = returnArrayAndOrientation($inicial, $orientacionInicial, comandos)

@@ -2,30 +2,23 @@
 <html>
 <head>
       <link rel="stylesheet" type="text/css" href="css/juego.css"/> 
-      <link rel="stylesheet" type="text/css" href="css/bienvenida.css"/> 
 </head>
-</html>
+
 
 <body>
 
-    <h1 class="titulo">La posicion final es:</h1>
-    <div class="principal">
-
+    <h1>La posicion final es:</h1>
          
 
          <div class="comandos">
-            <p></p> <%=@resultado%>
+            <p><%=@resultado%></p> 
 
 <br><br><br>
 
-            <form method='post' action ='/menu'>
+            <form method='get' action ='/menu'>
             <input type='submit' value='VOLVER A JUGAR' class="boton">
     </div>
-   
 
 
-    
-    </div>
-
-   
 </body>
+</html>
